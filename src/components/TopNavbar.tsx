@@ -1,11 +1,9 @@
 import React from 'react';
-import { User, Bell, Moon, Sun, Terminal, Eye, Home, Palette } from 'lucide-react';
+import { User, Bell, Moon, Sun, Home, Palette } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
 
 interface TopNavbarProps {
-  terminalMode: boolean;
-  setTerminalMode: (mode: boolean) => void;
   showNotifications: boolean;
   setShowNotifications: (show: boolean) => void;
   showUserProfile: boolean;
@@ -13,8 +11,6 @@ interface TopNavbarProps {
 }
 
 const TopNavbar: React.FC<TopNavbarProps> = ({ 
-  terminalMode, 
-  setTerminalMode,
   showNotifications,
   setShowNotifications,
   showUserProfile,
@@ -22,10 +18,6 @@ const TopNavbar: React.FC<TopNavbarProps> = ({
 }) => {
   const navigate = useNavigate();
   const { theme, toggleTheme } = useTheme();
-
-  const handleTerminalToggle = () => {
-    setTerminalMode(!terminalMode);
-  };
 
   const handleNotificationToggle = () => {
     setShowNotifications(!showNotifications);
@@ -73,10 +65,10 @@ const TopNavbar: React.FC<TopNavbarProps> = ({
           >
             <Home className="w-5 h-5" />
           </button>
-          <h1 className={`text-xl font-bold ${currentTheme.text}`}>Trading Dashboard</h1>
+          <h1 className={`text-xl font-bold ${currentTheme.text}`}>Personal Finance Dashboard</h1>
           <div className={`hidden md:flex items-center space-x-2 text-sm ${currentTheme.textSecondary}`}>
             <div className={`w-2 h-2 ${theme === 'zk' ? 'bg-zk-leather' : 'bg-green-500'} rounded-full animate-pulse`}></div>
-            <span>Live Market Data</span>
+            <span>Live Financial Data</span>
           </div>
         </div>
         
@@ -87,18 +79,6 @@ const TopNavbar: React.FC<TopNavbarProps> = ({
             title="Toggle Theme"
           >
             <Palette className="w-5 h-5" />
-          </button>
-          
-          <button
-            onClick={handleTerminalToggle}
-            className={`p-2 rounded-lg transition-all duration-200 ${
-              terminalMode
-                ? currentTheme.activeButton
-                : currentTheme.button
-            }`}
-            title={terminalMode ? 'Switch to Visual Mode' : 'Switch to Terminal Mode'}
-          >
-            {terminalMode ? <Eye className="w-5 h-5" /> : <Terminal className="w-5 h-5" />}
           </button>
           
           <button className={`p-2 ${currentTheme.button} rounded-lg transition-all duration-200`}>

@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import TopNavbar from './TopNavbar';
-import StockChart from './StockChart';
-import StrategySelector from './StrategySelector';
-import SimulationOutput from './SimulationOutput';
+import ExpenseTracker from './ExpenseTracker';
+import BudgetManager from './BudgetManager';
+import SavingsGoals from './SavingsGoals';
+import DebtManager from './DebtManager';
+import IncomeTracker from './IncomeTracker';
+import FinancialHealthScore from './FinancialHealthScore';
+import InvestmentOverview from './InvestmentOverview';
+import FinancialInsights from './FinancialInsights';
 import Portfolio from './Portfolio';
-import AlertPanel from './AlertPanel';
+import FinancialAlerts from './FinancialAlerts';
 import ReportSection from './ReportSection';
 import MobileNavigation from './MobileNavigation';
-import AlgorithmVisualization from './AlgorithmVisualization';
-import SystemInternals from './SystemInternals';
 import NotificationPanel from './NotificationPanel';
 import UserProfile from './UserProfile';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Dashboard = () => {
-  const [activeTab, setActiveTab] = useState('dashboard');
-  const [terminalMode, setTerminalMode] = useState(false);
+  const [activeTab, setActiveTab] = useState('overview');
   const [showNotifications, setShowNotifications] = useState(false);
   const [showUserProfile, setShowUserProfile] = useState(false);
   const { theme } = useTheme();
@@ -44,8 +46,6 @@ const Dashboard = () => {
       {/* Main Content */}
       <div className="flex-1 flex flex-col">
         <TopNavbar 
-          terminalMode={terminalMode} 
-          setTerminalMode={setTerminalMode}
           showNotifications={showNotifications}
           setShowNotifications={setShowNotifications}
           showUserProfile={showUserProfile}
@@ -63,33 +63,59 @@ const Dashboard = () => {
         )}
         
         <main className="flex-1 p-4 lg:p-6 overflow-auto">
-          {activeTab === 'dashboard' && (
+          {activeTab === 'overview' && (
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div className="lg:col-span-2 space-y-6">
-                <StockChart terminalMode={terminalMode} />
-                <SimulationOutput />
+                <FinancialHealthScore />
+                <ExpenseTracker />
               </div>
               <div className="space-y-6">
-                <Portfolio />
-                <AlertPanel />
+                <BudgetManager />
+                <FinancialAlerts />
               </div>
             </div>
           )}
           
-          {activeTab === 'trading' && (
+          {activeTab === 'expenses' && (
             <div className="max-w-6xl mx-auto">
-              <StrategySelector />
+              <ExpenseTracker />
             </div>
           )}
 
-          {activeTab === 'algorithms' && (
+          {activeTab === 'budget' && (
             <div className="max-w-6xl mx-auto">
-              <AlgorithmVisualization />
+              <BudgetManager />
             </div>
           )}
 
-          {activeTab === 'internals' && (
-            <SystemInternals />
+          {activeTab === 'savings' && (
+            <div className="max-w-6xl mx-auto">
+              <SavingsGoals />
+            </div>
+          )}
+
+          {activeTab === 'debt' && (
+            <div className="max-w-6xl mx-auto">
+              <DebtManager />
+            </div>
+          )}
+
+          {activeTab === 'income' && (
+            <div className="max-w-6xl mx-auto">
+              <IncomeTracker />
+            </div>
+          )}
+
+          {activeTab === 'investments' && (
+            <div className="max-w-6xl mx-auto">
+              <InvestmentOverview />
+            </div>
+          )}
+
+          {activeTab === 'insights' && (
+            <div className="max-w-6xl mx-auto">
+              <FinancialInsights />
+            </div>
           )}
           
           {activeTab === 'portfolio' && (

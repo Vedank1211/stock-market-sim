@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart3, Target, PieChart, FileText, Brain, Monitor } from 'lucide-react';
+import { Home, CreditCard, DollarSign, Target, TrendingUp, FileText } from 'lucide-react';
 
 interface MobileNavigationProps {
   activeTab: string;
@@ -8,11 +8,11 @@ interface MobileNavigationProps {
 
 const MobileNavigation: React.FC<MobileNavigationProps> = ({ activeTab, setActiveTab }) => {
   const menuItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: BarChart3 },
-    { id: 'trading', label: 'Trading', icon: Target },
-    { id: 'algorithms', label: 'Algorithms', icon: Brain },
-    { id: 'internals', label: 'Internals', icon: Monitor },
-    { id: 'portfolio', label: 'Portfolio', icon: PieChart },
+    { id: 'overview', label: 'Overview', icon: Home },
+    { id: 'expenses', label: 'Expenses', icon: CreditCard },
+    { id: 'budget', label: 'Budget', icon: DollarSign },
+    { id: 'savings', label: 'Savings', icon: Target },
+    { id: 'investments', label: 'Invest', icon: TrendingUp },
     { id: 'reports', label: 'Reports', icon: FileText },
   ];
 

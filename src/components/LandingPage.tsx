@@ -225,7 +225,7 @@ This is a student project for educational purposes only.
             <div className={`absolute -top-1 -right-1 w-3 h-3 ${theme === 'zk' ? 'bg-zk-leather' : 'bg-green-500'} rounded-full animate-pulse`}></div>
           </div>
           <span className={`text-2xl font-bold ${currentTheme.text} tracking-tight font-space`}>
-            AlgoTradeSim
+            FinanceAI
           </span>
         </div>
         <nav className="hidden md:flex space-x-8 items-center">
@@ -247,19 +247,19 @@ This is a student project for educational purposes only.
         <div className="text-center max-w-6xl mx-auto">
           <h1 className="text-6xl md:text-8xl font-black mb-8 leading-tight tracking-tighter">
             <span className={`font-space ${theme === 'zk' ? 'bg-gradient-to-r from-zk-coral via-zk-leather to-zk-coral' : 'bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800'} bg-clip-text text-transparent uppercase`}>
-              ALGO-TRADE-SIM
+              FINANCE-AI
             </span>
           </h1>
           
           <div className={`text-2xl md:text-4xl ${theme === 'zk' ? 'text-zk-eggshell' : 'text-gray-700'} mb-4 font-light tracking-wide`}>
-            <span className={`${theme === 'zk' ? 'text-zk-leather' : 'text-green-600'} font-semibold uppercase`}>SIMULATE</span> • 
+            <span className={`${theme === 'zk' ? 'text-zk-leather' : 'text-green-600'} font-semibold uppercase`}>TRACK</span> • 
             <span className={`${theme === 'zk' ? 'text-zk-coral' : 'text-blue-600'} font-semibold uppercase`}> ANALYZE</span> • 
             <span className={`${theme === 'zk' ? 'text-zk-leather' : 'text-purple-600'} font-semibold uppercase`}> OPTIMIZE</span>
           </div>
           
           <p className={`text-xl md:text-2xl ${theme === 'zk' ? 'text-zk-eggshell/80' : 'text-gray-600'} mb-12 max-w-4xl mx-auto font-light leading-relaxed`}>
-            Advanced algorithmic trading simulation platform powered by machine learning, 
-            dynamic programming, and heuristic optimization strategies
+            AI-powered personal finance management system with intelligent budgeting, 
+            savings optimization, and comprehensive financial health analysis
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
@@ -274,15 +274,15 @@ This is a student project for educational purposes only.
             <div className={`flex items-center space-x-4 text-sm ${theme === 'zk' ? 'text-zk-eggshell/60' : 'text-gray-500'}`}>
               <div className="flex items-center space-x-2">
                 <div className={`w-2 h-2 ${theme === 'zk' ? 'bg-zk-leather' : 'bg-green-500'} rounded-full animate-pulse`}></div>
-                <span>Real-time Data</span>
+                <span>Real-time Tracking</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className={`w-2 h-2 ${theme === 'zk' ? 'bg-zk-coral' : 'bg-blue-500'} rounded-full animate-pulse`}></div>
-                <span>5 Algorithms</span>
+                <span>AI Insights</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className={`w-2 h-2 ${theme === 'zk' ? 'bg-zk-leather' : 'bg-purple-500'} rounded-full animate-pulse`}></div>
-                <span>Live Simulation</span>
+                <span>Smart Budgeting</span>
               </div>
             </div>
           </div>
@@ -291,15 +291,15 @@ This is a student project for educational purposes only.
           <div className={`${currentTheme.cardBg} backdrop-blur-sm border ${currentTheme.border} rounded-2xl p-8 mb-16 shadow-2xl`}>
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center space-x-4">
-                <h3 className={`text-2xl font-bold ${currentTheme.text}`}>Live Market Simulation</h3>
+                <h3 className={`text-2xl font-bold ${currentTheme.text}`}>Financial Health Dashboard</h3>
                 <div className="flex items-center space-x-2">
                   <div className={`w-3 h-3 ${theme === 'zk' ? 'bg-zk-leather' : 'bg-green-500'} rounded-full animate-pulse`}></div>
-                  <span className={`text-sm ${theme === 'zk' ? 'text-zk-eggshell/80' : 'text-gray-600'} font-medium`}>Real-time</span>
+                  <span className={`text-sm ${theme === 'zk' ? 'text-zk-eggshell/80' : 'text-gray-600'} font-medium`}>Live Data</span>
                 </div>
               </div>
               <div className="text-right">
-                <div className={`text-3xl font-bold ${currentTheme.text}`}>17,758.45</div>
-                <div className={`text-sm ${theme === 'zk' ? 'text-zk-leather' : 'text-green-600'} font-semibold`}>+2.3% ↗</div>
+                <div className={`text-3xl font-bold ${currentTheme.text}`}>85/100</div>
+                <div className={`text-sm ${theme === 'zk' ? 'text-zk-leather' : 'text-green-600'} font-semibold`}>Excellent ↗</div>
               </div>
             </div>
             
@@ -365,20 +365,20 @@ This is a student project for educational purposes only.
             
             <div className={`flex items-center justify-center space-x-8 mt-6 text-sm ${theme === 'zk' ? 'text-zk-eggshell/80' : 'text-gray-600'}`}>
               <div className="text-center">
-                <div className={`font-bold ${currentTheme.text}`}>18,400.00</div>
-                <div>Day High</div>
+                <div className={`font-bold ${currentTheme.text}`}>$15,847</div>
+                <div>Monthly Income</div>
               </div>
               <div className="text-center">
-                <div className={`font-bold ${currentTheme.text}`}>17,200.00</div>
-                <div>Day Low</div>
+                <div className={`font-bold ${currentTheme.text}`}>$8,234</div>
+                <div>Monthly Expenses</div>
               </div>
               <div className="text-center">
-                <div className={`font-bold ${currentTheme.text}`}>2.4M</div>
-                <div>Volume</div>
+                <div className={`font-bold ${currentTheme.text}`}>$45,600</div>
+                <div>Total Savings</div>
               </div>
               <div className="text-center">
-                <div className={`font-bold ${theme === 'zk' ? 'text-zk-leather' : 'text-green-600'}`}>+158.45</div>
-                <div>Change</div>
+                <div className={`font-bold ${theme === 'zk' ? 'text-zk-leather' : 'text-green-600'}`}>+22%</div>
+                <div>Savings Rate</div>
               </div>
             </div>
           </div>
@@ -388,25 +388,25 @@ This is a student project for educational purposes only.
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className={`${currentTheme.cardBg} backdrop-blur-sm border ${currentTheme.border} rounded-2xl p-8 hover:border-gray-300 hover:shadow-xl transition-all duration-300 group card-hover`}>
             <Brain className={`w-16 h-16 ${theme === 'zk' ? 'text-zk-coral' : 'text-blue-600'} mb-6 group-hover:scale-110 transition-transform`} />
-            <h3 className={`text-2xl font-bold mb-4 ${currentTheme.text}`}>Advanced Algorithms</h3>
+            <h3 className={`text-2xl font-bold mb-4 ${currentTheme.text}`}>AI-Powered Insights</h3>
             <p className={`${theme === 'zk' ? 'text-zk-eggshell/80' : 'text-gray-600'} text-lg leading-relaxed`}>
-              Greedy strategies, dynamic programming, pattern matching, and portfolio optimization algorithms with real-time decision making.
+              Smart financial analysis using machine learning to identify spending patterns, optimize budgets, and provide personalized recommendations.
             </p>
           </div>
           
           <div className={`${currentTheme.cardBg} backdrop-blur-sm border ${currentTheme.border} rounded-2xl p-8 hover:border-gray-300 hover:shadow-xl transition-all duration-300 group card-hover`}>
             <TrendingUp className={`w-16 h-16 ${theme === 'zk' ? 'text-zk-leather' : 'text-green-600'} mb-6 group-hover:scale-110 transition-transform`} />
-            <h3 className={`text-2xl font-bold mb-4 ${currentTheme.text}`}>Live Market Analysis</h3>
+            <h3 className={`text-2xl font-bold mb-4 ${currentTheme.text}`}>Comprehensive Tracking</h3>
             <p className={`${theme === 'zk' ? 'text-zk-eggshell/80' : 'text-gray-600'} text-lg leading-relaxed`}>
-              Real-time market data simulation with comprehensive performance analytics, risk assessment, and profit tracking.
+              Track expenses, income, savings goals, debt, and investments all in one place with real-time updates and detailed analytics.
             </p>
           </div>
           
           <div className={`${currentTheme.cardBg} backdrop-blur-sm border ${currentTheme.border} rounded-2xl p-8 hover:border-gray-300 hover:shadow-xl transition-all duration-300 group card-hover`}>
             <Zap className={`w-16 h-16 ${theme === 'zk' ? 'text-zk-coral' : 'text-purple-600'} mb-6 group-hover:scale-110 transition-transform`} />
-            <h3 className={`text-2xl font-bold mb-4 ${currentTheme.text}`}>High Performance</h3>
+            <h3 className={`text-2xl font-bold mb-4 ${currentTheme.text}`}>Smart Automation</h3>
             <p className={`${theme === 'zk' ? 'text-zk-eggshell/80' : 'text-gray-600'} text-lg leading-relaxed`}>
-              Optimized algorithms with O(n log n) complexity for rapid strategy backtesting and real-time execution.
+              Automated budget tracking, bill reminders, savings goal monitoring, and intelligent financial health scoring.
             </p>
           </div>
         </div>
@@ -453,7 +453,7 @@ This is a student project for educational purposes only.
             Made by: <span className={`${theme === 'zk' ? 'text-zk-eggshell/80' : 'text-gray-600'} font-medium`}>VEDANK CHATURVEDI • NITESH GUPTA • KYNA PRADEEP • ANWITA R RAO</span>
           </p>
           <p className={`text-center text-xs ${theme === 'zk' ? 'text-zk-eggshell/40' : 'text-gray-400'}`}>
-            © 2024 AlgoTradeSim - Advanced Algorithmic Trading Simulation Platform
+            © 2024 FinanceAI - AI-Powered Personal Finance Management System
           </p>
         </div>
       </footer>

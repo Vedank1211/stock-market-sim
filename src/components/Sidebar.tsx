@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart3, Target, PieChart, FileText, TrendingUp, Brain, Monitor } from 'lucide-react';
+import { Home, CreditCard, DollarSign, Target, Briefcase, PiggyBank, TrendingUp, Lightbulb, FileText, PieChart } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 interface SidebarProps {
@@ -11,10 +11,14 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
   const { theme } = useTheme();
   
   const menuItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: BarChart3 },
-    { id: 'trading', label: 'Trading Strategies', icon: Target },
-    { id: 'algorithms', label: 'Algorithm Viewer', icon: Brain },
-    { id: 'internals', label: 'System Internals', icon: Monitor },
+    { id: 'overview', label: 'Overview', icon: Home },
+    { id: 'expenses', label: 'Expenses', icon: CreditCard },
+    { id: 'budget', label: 'Budget', icon: DollarSign },
+    { id: 'savings', label: 'Savings Goals', icon: Target },
+    { id: 'debt', label: 'Debt Manager', icon: Briefcase },
+    { id: 'income', label: 'Income', icon: PiggyBank },
+    { id: 'investments', label: 'Investments', icon: TrendingUp },
+    { id: 'insights', label: 'Insights', icon: Lightbulb },
     { id: 'portfolio', label: 'Portfolio Analysis', icon: PieChart },
     { id: 'reports', label: 'Reports', icon: FileText },
   ];
@@ -46,7 +50,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
         <div className="flex items-center space-x-2">
           <TrendingUp className={`w-8 h-8 ${theme === 'zk' ? 'text-zk-coral' : 'text-blue-600'}`} />
           <span className={`text-xl font-bold ${currentTheme.text} tracking-tight`}>
-            AlgoTradeSim
+            FinanceAI
           </span>
         </div>
       </div>
